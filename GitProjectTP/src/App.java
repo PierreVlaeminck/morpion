@@ -27,16 +27,17 @@ public class App {
         }
 
         // Affichage de la traduction en fonction de la langue choisie
-        if (choix == 1) {
-            System.out.println(vAnglais.getTraduction("Bonjour"));
+        switch (choix) {
+            case 1:
+                System.out.println(vAnglais.getTraduction("Bonjour"));
+                break;
+            case 2:
+                System.out.println(vBreton.getTraduction("Bonjour"));
+                break;
+            default:
+                System.out.println(vTogolaise.getTraduction("Bonjour"));
+                break;
         }
-        if (choix == 2) {
-            System.out.println(vBreton.getTraduction("Bonjour"));
-        }
-        else {
-            System.out.println(vTogolaise.getTraduction("Bonjour"));
-        }
-
         //Fenetre f = new Fenetre();
         //f.setVisible(true);
     }
