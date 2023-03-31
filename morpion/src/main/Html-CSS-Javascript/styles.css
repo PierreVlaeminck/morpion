@@ -1,0 +1,67 @@
+/* Définition du style pour le corps de la page */
+body {
+    background-color: #DDD;
+    /* Définition de la couleur de fond */
+    font-family: sans-serif;
+    /* Définition de la police de caractères utilisée pour tout le corps de la page */
+}
+
+body h1 {
+    display: flex;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+/* Définition du style pour la grille du morpion */
+.morpion {
+    display: grid;
+    /* Utilisation du mode d'affichage "grid" pour créer la grille */
+    grid-template-columns: repeat(3, 120px);
+    /* Définition de 3 colonnes de 120px de large chacune */
+    grid-template-rows: repeat(3, 120px);
+    /* Définition de 3 rangées de 120px de haut chacune */
+    column-gap: 2px;
+    /* Espacement horizontal de 2px entre les colonnes */
+    row-gap: 2px;
+    /* Espacement vertical de 2px entre les rangées */
+    align-items: stretch;
+    /* Alignement vertical des cellules à "stretch" pour remplir tout l'espace disponible */
+    justify-items: stretch;
+    /* Alignement horizontal des cellules à "stretch" pour remplir tout l'espace disponible */
+    margin-bottom: 10px;
+    /* Ajout d'une marge en bas de la grille pour la séparer des éléments suivants */
+    justify-content: center;
+}
+
+/* Définition du style pour chaque cellule de la grille */
+.cell {
+    display: inline-grid;
+    /* Utilisation du mode d'affichage "inline-grid" pour afficher les éléments en grille à l'intérieur des cellules */
+    font-size: 4em;
+    /* Définition de la taille de police pour les éléments à l'intérieur des cellules */
+    background-color: #1c57b5;
+    /* Définition de la couleur de fond pour les cellules */
+    vertical-align: middle;
+    /* Alignement vertical du contenu de la cellule au milieu */
+    align-items: center;
+    /* Alignement vertical du contenu de la cellule également au milieu */
+    justify-items: center;
+    /* Alignement horizontal du contenu de la cellule également au centre */
+    cursor: pointer;
+    /* Ajout du curseur "pointer" pour indiquer que la cellule est cliquable */
+    border: 2px solid black;
+}
+
+.gagnant {
+    display: flex;
+    font-size: large;
+    color: red;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+.restart {
+    display: flex;
+    font-size: large;
+    justify-content: center;
+}
